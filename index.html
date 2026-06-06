@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Xtronics Space | From Ideas to Orbit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, rgba(0,191,255,.15), transparent 25%),
+radial-gradient(circle at 80% 70%, rgba(0,191,255,.08), transparent 25%);
+z-index:-2;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:.12;
+z-index:-1;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(20px);
+background:rgba(5,8,22,.75);
+border-bottom:1px solid rgba(255,255,255,.05);
+z-index:1000;
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#00bfff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:.95rem;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:clamp(3rem,8vw,6rem);
+font-weight:800;
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#00bfff;
+}
+
+.hero p{
+font-size:1.2rem;
+color:#c8d1e0;
+line-height:1.8;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:#00bfff;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(0,191,255,.35);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:2.8rem;
+font-weight:800;
+margin-bottom:20px;
+text-align:center;
+}
+
+.section-sub{
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#b9c4d4;
+line-height:1.8;
+}
+
+.glass{
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+}
+
+.about-box{
+margin-top:50px;
+padding:40px;
+max-width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.about-box p{
+line-height:2;
+color:#d0d8e5;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:60px;
+}
+
+.card{
+padding:30px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(0,191,255,.3);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:1.3rem;
+}
+
+.card p{
+color:#c8d1e0;
+line-height:1.7;
+}
+
+.timeline{
+max-width:900px;
+margin:60px auto;
+border-left:3px solid #00bfff;
+padding-left:30px;
+}
+
+.step{
+margin-bottom:45px;
+}
+
+.step h4{
+font-size:1.3rem;
+margin-bottom:8px;
+}
+
+.step p{
+color:#c8d1e0;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.stat{
+padding:35px;
+text-align:center;
+}
+
+.number{
+font-size:3rem;
+font-weight:800;
+color:#00bfff;
+margin-bottom:10px;
+}
+
+footer{
+padding:60px 8%;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h2{
+margin-bottom:15px;
+}
+
+footer p{
+color:#aeb7c7;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+
+<div class="logo">
+XTRONICS <span>SPACE</span>
+</div>
+
+<nav>
+<a href="#about">À propos</a>
+<a href="#research">Recherche</a>
+<a href="#projects">Projets</a>
+<a href="#vision">Vision</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>XTRONICS <span>SPACE</span></h1>
+
+<p>
+Un laboratoire d'idées indépendant consacré à la robotique,
+à l'intelligence artificielle, aux technologies spatiales
+et à l'ingénierie du futur.
+</p>
+
+<p>
+Projet fondé par un étudiant passionné de sciences,
+de technologie et d'exploration.
+</p>
+
+<a href="#about" class="btn">Découvrir la vision</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">À propos</h2>
+
+<p class="section-sub">
+Chaque grande aventure commence par une idée.
+Xtronics Space est né de la volonté d'apprendre,
+de construire et d'expérimenter.
+</p>
+
+<div class="about-box glass">
+
+<p>
+Xtronics Space n'est pas encore une entreprise spatiale.
+C'est un projet indépendant en développement dont la mission
+est d'explorer les domaines de la robotique,
+de l'intelligence artificielle et de l'ingénierie spatiale.
+
+L'objectif est d'acquérir des connaissances,
+de réaliser des prototypes et de partager cette aventure
+avec tous ceux qui rêvent de construire les technologies de demain.
+</p>
+
+</div>
+
+</section>
+
+<section id="research">
+
+<h2 class="section-title">Domaines de recherche</h2>
+
+<div class="grid">
+
+<div class="card glass">
+<h3>🚀 Propulsion</h3>
+<p>Études de concepts de propulsion, dynamique du vol et technologies de lancement éducatives.</p>
+</div>
+
+<div class="card glass">
+<h3>🤖 Robotique</h3>
+<p>Développement de rovers, plateformes autonomes et systèmes mécatroniques.</p>
+</div>
+
+<div class="card glass">
+<h3>🧠 Intelligence Artificielle</h3>
+<p>Vision par ordinateur, automatisation et systèmes intelligents embarqués.</p>
+</div>
+
+<div class="card glass">
+<h3>🛰 Technologies Spatiales</h3>
+<p>Recherche autour des satellites, missions spatiales et systèmes embarqués.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Programmes futurs</h2>
+
+<div class="grid">
+
+<div class="card glass">
+<h3>TITAN</h3>
+<p>Programme expérimental destiné à l'étude des véhicules aérospatiaux éducatifs.</p>
+</div>
+
+<div class="card glass">
+<h3>X-ROVER</h3>
+<p>Prototype de rover autonome inspiré des missions planétaires.</p>
+</div>
+
+<div class="card glass">
+<h3>LUNA AI</h3>
+<p>Assistant intelligent conçu pour accompagner les projets scientifiques.</p>
+</div>
+
+<div class="card glass">
+<h3>ORBITAL</h3>
+<p>Études théoriques et simulations de missions spatiales futures.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Journal de bord</h2>
+
+<div class="timeline">
+
+<div class="step">
+<h4>2026 • Fondation</h4>
+<p>Création de Xtronics Space et définition de la vision du projet.</p>
+</div>
+
+<div class="step">
+<h4>2027 • Premiers prototypes</h4>
+<p>Développement de concepts robotiques et expérimentations techniques.</p>
+</div>
+
+<div class="step">
+<h4>2028 • Programme TITAN</h4>
+<p>Études avancées autour des systèmes de lancement éducatifs.</p>
+</div>
+
+<div class="step">
+<h4>2030+ • Expansion</h4>
+<p>Création de projets plus ambitieux dans les domaines de l'IA et de la robotique.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="vision">
+
+<h2 class="section-title">Vision</h2>
+
+<p class="section-sub">
+Nous ne construisons pas encore des lanceurs orbitaux.
+Nous construisons les compétences, les connaissances
+et les prototypes qui permettront un jour de réaliser
+des projets plus ambitieux.
+</p>
+
+<div class="stats">
+
+<div class="stat glass">
+<div class="number">4</div>
+Programmes principaux
+</div>
+
+<div class="stat glass">
+<div class="number">∞</div>
+Possibilités
+</div>
+
+<div class="stat glass">
+<div class="number">1</div>
+Vision
+</div>
+
+<div class="stat glass">
+<div class="number">100%</div>
+Passion
+</div>
+
+</div>
+
+</section>
+
+<footer id="contact">
+
+<h2>XTRONICS SPACE</h2>
+
+<p>
+Innovation • Robotique • Intelligence Artificielle • Exploration
+</p>
+
+<br>
+
+<p>
+Basé à Kinshasa, RDC
+</p>
+
+<br>
+
+<p>
+© 2026 Xtronics Space
+<br>
+From Ideas to Orbit.
+</p>
+
+</footer>
+
+</body>
+</html>
